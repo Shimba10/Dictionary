@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from nltk.corpus.reader.panlex_lite import Meaning
+
 from templates import dict
 from nltk.corpus import wordnet
 from PyDictionary import PyDictionary
