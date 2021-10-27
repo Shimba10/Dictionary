@@ -1,6 +1,6 @@
 from django.shortcuts import render
 import nltk
-nltk.download()
+nltk.download('wordnet')
 from templates import dict
 from nltk.corpus import wordnet
 from PyDictionary import PyDictionary
