@@ -1,0 +1,134 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dictionary</title>
+        <style>
+            :root{
+    
+                --background: #3F3838;
+                --color: #FCF5F5;
+            }
+
+            html{
+                background: #FFFFFF;
+                font-family: Arial, Helvetica, sans-serif;
+                
+                
+            }
+            body{
+               
+                margin: 5em auto 0px auto;
+                background-color: var(--background);
+                width: 40em;
+                height: 39em;
+                border-radius: 25px;
+            }
+            .container{
+                margin-left:2em;
+                padding:2em 1em 0 1em;
+            }
+            
+            p.prop{
+                color: var(--color);
+                margin-top: 2.5em;
+                padding:1em 2em 0 0;
+                transition: all 1s ease;
+                letter-spacing: 1px;
+                word-wrap: break-word;
+                line-height: 1.5em;
+            }
+            p.prop:hover{
+                transform: scale(1.1);
+            }
+            .search{
+                width: 20em;
+                height: 2.2em;
+                border-radius: 20px;
+                
+                
+            }
+            .submit{
+                margin-left: 1em;
+                height: 2.2em;
+                border-radius: 20px;
+                width: 5em;
+                overflow: hidden;
+                z-index: 1;
+                position:relative;
+                
+            }
+
+            .submit::before{
+                
+                content: "";
+                background: #3b5999;
+                width: 5em;
+                height: 2.2em;
+                border-radius: 20px;
+                position: absolute;
+                bottom: -2.3em;
+                right: 0em;
+                
+                z-index: -1;
+                overflow: hidden;
+                
+                transition: all 0.5s ease;
+
+            }
+            .submit:hover{
+                color:var(--color);
+            }
+           
+            .submit:hover::before{
+                bottom: -0.1em;
+                left: -0.1em;
+                
+                
+            }
+            @media (max-width:600px){
+                body{
+                    height: 70em;
+                }
+                p.prop{
+                    font-size: 1.5em;
+
+                }
+                .search{
+                    width: 30em;
+                    height: 3.2em;
+                }
+                .submit{
+                    width: 7em;
+                    height: 3.2em;
+                }
+                
+            }
+            
+
+        </style>
+    </head>
+    <body>
+
+            <div class="container">
+                <form method="post">
+                    {% csrf_token %}
+                    <input type="search" name="search" class="search">
+                    
+                    <button type="submit"  class="submit">Search</button>
+                </form>
+
+            </div>
+        
+            <div class="container">
+                
+                <p class="prop">Meaning : {{total}}</p>
+                <p class="prop" >Synonyms : {{synonym}}</p>
+                <p class="prop">Antonyms : {{anto}}</p>
+
+            </div>
+        
+    </body>
+</html>
+
