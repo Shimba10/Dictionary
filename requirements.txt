@@ -6,7 +6,9 @@ charset-normalizer==2.0.7
 click==8.0.3
 colorama==0.4.4
 dictionary==1.0
+dj-database-url==0.5.0
 Django==3.2.8
+django-heroku==0.3.1
 futures==2.2.0
 goslate==1.5.1
 gunicorn==20.1.0
@@ -15,6 +17,7 @@ idna==3.3
 joblib==1.1.0
 nltk==3.6.5
 Pillow==8.4.0
+psycopg2==2.9.1
 PyDictionary==2.0.1
 python-dateutil==1.5
 pytz==2021.3
@@ -24,3 +27,4 @@ soupsieve==2.2.1
 sqlparse==0.4.2
 tqdm==4.62.3
 urllib3==1.26.7
+whitenoise==5.3.0
