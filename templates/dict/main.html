@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Dictionary</title>
         <style>
             :root{
@@ -14,15 +14,16 @@
             html{
                 background: #FFFFFF;
                 font-family: Arial, Helvetica, sans-serif;
-                
+                min-width: 2em;
                 
             }
             body{
                
                 margin: 5em auto 0px auto;
                 background-color: var(--background);
-                width: 40em;
-                height: 39em;
+                max-width: 40em;
+                padding-bottom: 2em;
+                min-height: 20em;
                 border-radius: 25px;
             }
             .container{
@@ -44,6 +45,7 @@
             }
             .search{
                 width: 20em;
+                
                 height: 2.2em;
                 border-radius: 20px;
                 
@@ -87,35 +89,32 @@
                 
                 
             }
-            @media (max-width:600px){
+            @media (max-width:650px){
                 body{
-                    height: 70em;
+                    padding-bottom: 2em;
                 }
+                
                 p.prop{
-                    font-size: 1.5em;
+                    font-size: 1.2em;
 
                 }
+                
                 .search{
-                    width: 30em;
-                    height: 3.2em;
-                }
-                .submit{
-                    width: 7em;
-                    height: 3.2em;
+                    max-width: 12em;
+                    
                 }
                 .submit::before{
-                    width: 7em;
-                    height: 3.2em;
+                   
                     bottom: -3.4em;
                 }
                 
             }
-            
+          
 
         </style>
     </head>
     <body>
-
+        
             <div class="container">
                 <form method="post">
                     {% csrf_token %}
