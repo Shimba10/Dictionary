@@ -54,3 +54,5 @@ def dictionary(request):
         
         context = {'synonym':syno,'total':mean,'anto': anto}
         return render(request, 'dict/main.html',context)
+
+#cgccng
